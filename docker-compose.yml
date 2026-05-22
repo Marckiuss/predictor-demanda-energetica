@@ -1,0 +1,16 @@
+version: "3"
+services:
+  hdfs_local:
+    image: harisekhon/hadoop:latest
+    container_name: nodo_hdfs_proyecto_demanda
+    restart: unless-stopped
+    ports:
+      - "50070:50070" 
+      - "8020:8020" 
+    stdin_open: true
+    tty: true
+    volumes:
+      # Volumen de almacenamiento para HDFS
+      - ./data/hdfs_storage:/hdfs/store
+      # Volumen de acceso al dataset de demanda de la capar oro en formato parquet
+      - ./data/gold/dataset_demanda_parquet:/data/capa_oro

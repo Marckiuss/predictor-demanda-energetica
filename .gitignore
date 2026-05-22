@@ -1,0 +1,14 @@
+# Ocultar el entorno virtual de Python
+.venv/
+venv/
+
+# Ocultar las contraseñas y tokens de AWS
+.env
+
+# Ocultar la base de datos interna de Hadoop y los datasets
+/data/
+
+# Ocultar basura del sistema o de Python
+__pycache__/
+*.pyc
+.DS_Store
